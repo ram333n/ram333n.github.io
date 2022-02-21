@@ -1,0 +1,221 @@
+\hypertarget{linked__list_8h_source}{}\doxysection{linked\+\_\+list.\+h}
+\mbox{\hyperlink{linked__list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{abstract__list_8h}{abstract\_list.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_lists}{Lists}} \{}
+\DoxyCodeLine{14     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{15     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_lists_1_1_node}{Node}} \{}
+\DoxyCodeLine{16         T value;}
+\DoxyCodeLine{17         \mbox{\hyperlink{struct_lists_1_1_node}{Node}}* next, * prev;}
+\DoxyCodeLine{18         \mbox{\hyperlink{struct_lists_1_1_node}{Node}}() : next(\textcolor{keyword}{nullptr}), prev(\textcolor{keyword}{nullptr}) \{\};}
+\DoxyCodeLine{19         \mbox{\hyperlink{struct_lists_1_1_node}{Node}}(T new\_value) : value(std::move(new\_value)), next(\textcolor{keyword}{nullptr}), prev(\textcolor{keyword}{nullptr}) \{\};}
+\DoxyCodeLine{20     \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{27     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{28     \textcolor{keyword}{class }\mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}} : \textcolor{keyword}{public} std::iterator<std::bidirectional\_iterator\_tag, T> \{}
+\DoxyCodeLine{29     \textcolor{keyword}{private}:}
+\DoxyCodeLine{30         \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}* ptr\_;}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}}(\mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}* ptr) : ptr\_(ptr) \{\}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keyword}{template} <\textcolor{keyword}{typename} Type>}
+\DoxyCodeLine{34         \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_lists_1_1_linked_list}{LinkedList}};}
+\DoxyCodeLine{35     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}}() : ptr\_(\textcolor{keyword}{nullptr}) \{\}}
+\DoxyCodeLine{37         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}}\& it) : ptr\_(it.ptr\_) \{\}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \textcolor{comment}{//Comparators}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41         \textcolor{keywordtype}{bool} operator==(\mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}} rhs)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{42             \textcolor{keywordflow}{return} ptr\_ == rhs.ptr\_;}
+\DoxyCodeLine{43         \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \textcolor{keywordtype}{bool} operator!=(\mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}} rhs)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{46             \textcolor{keywordflow}{return} ptr\_ != rhs.ptr\_;}
+\DoxyCodeLine{47         \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{comment}{//Assign and access operators}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}}\& rhs) \{}
+\DoxyCodeLine{52             ptr\_ = rhs.ptr\_;}
+\DoxyCodeLine{53             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         T\& operator*()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{57             \textcolor{keywordflow}{return} ptr\_-\/>value;}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         T* operator-\/>() \{}
+\DoxyCodeLine{61             \textcolor{keywordflow}{return} \&ptr\_-\/>value;}
+\DoxyCodeLine{62         \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{keyword}{const} T* operator-\/>()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{65             \textcolor{keywordflow}{return} \&ptr\_-\/>value;}
+\DoxyCodeLine{66         \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{comment}{//Increment and decrement operators}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}}\& operator++() \{}
+\DoxyCodeLine{71             ptr\_ = ptr\_-\/>next;}
+\DoxyCodeLine{72             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{73         \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}}\& operator-\/-\/() \{}
+\DoxyCodeLine{76             ptr\_ = ptr\_-\/>prev;}
+\DoxyCodeLine{77             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{78         \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}} operator++(\textcolor{keywordtype}{int}) \{}
+\DoxyCodeLine{81             \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}} temp(*\textcolor{keyword}{this});}
+\DoxyCodeLine{82             ptr\_ = ptr\_-\/>next;}
+\DoxyCodeLine{83             \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}} operator-\/-\/(\textcolor{keywordtype}{int}) \{}
+\DoxyCodeLine{87             \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator}} temp(*\textcolor{keyword}{this});}
+\DoxyCodeLine{88             ptr\_ = ptr\_-\/>prev;}
+\DoxyCodeLine{89             \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91     \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{97     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{98     \textcolor{keyword}{class }\mbox{\hyperlink{class_lists_1_1_linked_list}{LinkedList}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_lists_1_1_abstract_list}{AbstractList}}<T, LinkedListIterator<T>> \{}
+\DoxyCodeLine{99     \textcolor{keyword}{private}:}
+\DoxyCodeLine{100         \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}* sentinel\_;}
+\DoxyCodeLine{101     \textcolor{keyword}{public}:}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{106         \mbox{\hyperlink{class_lists_1_1_linked_list_ab179ed1011cc7d445357fc41f5a1716f}{LinkedList}}() \{}
+\DoxyCodeLine{107             sentinel\_ = \textcolor{keyword}{new} \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}(T());}
+\DoxyCodeLine{108             sentinel\_-\/>prev = sentinel\_;}
+\DoxyCodeLine{109             sentinel\_-\/>next = sentinel\_;}
+\DoxyCodeLine{110         \};}
+\DoxyCodeLine{116         \textcolor{keyword}{explicit} \mbox{\hyperlink{class_lists_1_1_linked_list_ae087794b759ac175b83068322caa34a6}{LinkedList}}(\textcolor{keywordtype}{size\_t} new\_size, T value = T())\{}
+\DoxyCodeLine{117             sentinel\_ = \textcolor{keyword}{new} \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}(T());}
+\DoxyCodeLine{118             sentinel\_-\/>prev = sentinel\_;}
+\DoxyCodeLine{119             sentinel\_-\/>next = sentinel\_;}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121             this-\/>size\_ = new\_size;}
+\DoxyCodeLine{122             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < new\_size; ++i) \{         }
+\DoxyCodeLine{123                 \mbox{\hyperlink{class_lists_1_1_linked_list_a2c064a52dc7a65609325d2a7a2ffbb40}{PushBack}}(value);}
+\DoxyCodeLine{124             \}}
+\DoxyCodeLine{125         \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{133         \mbox{\hyperlink{class_lists_1_1_linked_list_a66ad86164de6abe68e256ddb0b8ba8c9}{LinkedList}}(\mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}} range\_begin, \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}} range\_end) \{}
+\DoxyCodeLine{134             sentinel\_ = \textcolor{keyword}{new} \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}(T());}
+\DoxyCodeLine{135             sentinel\_-\/>prev = sentinel\_;}
+\DoxyCodeLine{136             sentinel\_-\/>next = sentinel\_;}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138             \textcolor{keywordflow}{while} (range\_begin != range\_end) \{}
+\DoxyCodeLine{139                 \mbox{\hyperlink{class_lists_1_1_linked_list_a2c064a52dc7a65609325d2a7a2ffbb40}{PushBack}}(*range\_begin++);}
+\DoxyCodeLine{140                 ++this-\/>size\_;}
+\DoxyCodeLine{141             \}}
+\DoxyCodeLine{142         \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{150         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lists_1_1_linked_list_a5a5a30ff8d52273ee043e33c596afe19}{Insert}}(T to\_insert, \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}} pos)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{151             \textcolor{keywordflow}{if} (pos.ptr\_== sentinel\_) \{}
+\DoxyCodeLine{152                 \mbox{\hyperlink{class_lists_1_1_linked_list_a2c064a52dc7a65609325d2a7a2ffbb40}{PushBack}}(to\_insert);}
+\DoxyCodeLine{153             \}}
+\DoxyCodeLine{154             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pos.ptr\_ == sentinel\_-\/>next) \{}
+\DoxyCodeLine{155                 \mbox{\hyperlink{class_lists_1_1_linked_list_a53c18a123f17fa29ad965269756f86e2}{PushFront}}(to\_insert);}
+\DoxyCodeLine{156             \}}
+\DoxyCodeLine{157             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{158                 \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}* node\_to\_insert = \textcolor{keyword}{new} \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}(std::move(to\_insert));}
+\DoxyCodeLine{159                 pos.ptr\_-\/>prev-\/>next = node\_to\_insert;}
+\DoxyCodeLine{160                 node\_to\_insert-\/>prev = pos.ptr\_-\/>prev;}
+\DoxyCodeLine{161                 node\_to\_insert-\/>next = pos.ptr\_;}
+\DoxyCodeLine{162                 pos.ptr\_-\/>prev = node\_to\_insert;}
+\DoxyCodeLine{163                 ++this-\/>size\_;}
+\DoxyCodeLine{164             \}}
+\DoxyCodeLine{165         \}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{172         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lists_1_1_linked_list_a2c064a52dc7a65609325d2a7a2ffbb40}{PushBack}}(T to\_insert)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{173             \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}* node\_to\_push = \textcolor{keyword}{new} \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}(std::move(to\_insert));}
+\DoxyCodeLine{174             node\_to\_push-\/>prev = sentinel\_-\/>prev;}
+\DoxyCodeLine{175             node\_to\_push-\/>next = sentinel\_;}
+\DoxyCodeLine{176             sentinel\_-\/>prev-\/>next = node\_to\_push;}
+\DoxyCodeLine{177             sentinel\_-\/>prev = node\_to\_push;}
+\DoxyCodeLine{178             ++this-\/>size\_;}
+\DoxyCodeLine{179         \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{186         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lists_1_1_linked_list_a53c18a123f17fa29ad965269756f86e2}{PushFront}}(T to\_insert) \{}
+\DoxyCodeLine{187             \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}* node\_to\_push = \textcolor{keyword}{new} \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}(std::move(to\_insert));}
+\DoxyCodeLine{188             node\_to\_push-\/>prev = sentinel\_;}
+\DoxyCodeLine{189             node\_to\_push-\/>next = sentinel\_-\/>next;}
+\DoxyCodeLine{190             sentinel\_-\/>next-\/>prev = node\_to\_push;}
+\DoxyCodeLine{191             sentinel\_-\/>next = node\_to\_push;}
+\DoxyCodeLine{192             ++this-\/>size\_;}
+\DoxyCodeLine{193         \}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{202         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lists_1_1_linked_list_a0e560fe24fde331c3359c1f219128ea6}{Remove}}(\mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}} pos)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{203             \textcolor{keywordflow}{if} (pos.ptr\_ == sentinel\_)\{}
+\DoxyCodeLine{204                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{205             \}}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207             \textcolor{keywordflow}{if} (pos.ptr\_ == sentinel\_-\/>next) \{}
+\DoxyCodeLine{208                 \mbox{\hyperlink{class_lists_1_1_linked_list_aadbc27de4629ec1f84c26e90a62fb04b}{PopFront}}();}
+\DoxyCodeLine{209             \}}
+\DoxyCodeLine{210             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pos.ptr\_ == sentinel\_-\/>prev) \{}
+\DoxyCodeLine{211                 \mbox{\hyperlink{class_lists_1_1_linked_list_a1134e37c70b01d74500e441b60edf207}{PopBack}}();}
+\DoxyCodeLine{212             \}}
+\DoxyCodeLine{213             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{214                 pos.ptr\_-\/>prev-\/>next = pos.ptr\_-\/>next;}
+\DoxyCodeLine{215                 pos.ptr\_-\/>next-\/>prev = pos.ptr\_-\/>prev;}
+\DoxyCodeLine{216                 \textcolor{keyword}{delete} pos.ptr\_;}
+\DoxyCodeLine{217                 -\/-\/this-\/>size\_;}
+\DoxyCodeLine{218             \}}
+\DoxyCodeLine{219         \};}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{226         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lists_1_1_linked_list_a1134e37c70b01d74500e441b60edf207}{PopBack}}()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{227             \textcolor{keywordflow}{if} (sentinel\_-\/>prev == sentinel\_) \{}
+\DoxyCodeLine{228                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{229             \}}
+\DoxyCodeLine{230             \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}* to\_delete = sentinel\_-\/>prev;}
+\DoxyCodeLine{231             sentinel\_-\/>prev = sentinel\_-\/>prev-\/>prev;}
+\DoxyCodeLine{232             sentinel\_-\/>prev-\/>next = sentinel\_;}
+\DoxyCodeLine{233             \textcolor{keyword}{delete} to\_delete;}
+\DoxyCodeLine{234             -\/-\/this-\/>size\_;}
+\DoxyCodeLine{235         \}}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{242         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_lists_1_1_linked_list_aadbc27de4629ec1f84c26e90a62fb04b}{PopFront}}() \{}
+\DoxyCodeLine{243             \textcolor{keywordflow}{if} (sentinel\_-\/>next == sentinel\_) \{}
+\DoxyCodeLine{244                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{245             \}}
+\DoxyCodeLine{246             \mbox{\hyperlink{struct_lists_1_1_node}{Node<T>}}* to\_delete = sentinel\_-\/>next;}
+\DoxyCodeLine{247             sentinel\_-\/>next = sentinel\_-\/>next-\/>next;}
+\DoxyCodeLine{248             sentinel\_-\/>next-\/>prev = sentinel\_;}
+\DoxyCodeLine{249             \textcolor{keyword}{delete} to\_delete;}
+\DoxyCodeLine{250             -\/-\/this-\/>size\_;}
+\DoxyCodeLine{251         \};}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{257         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}} \mbox{\hyperlink{class_lists_1_1_linked_list_a8d7232b1e18112b2c41f84c8a297e897}{begin}}()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{258             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}}(sentinel\_-\/>next);}
+\DoxyCodeLine{259         \}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{265         \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}} \mbox{\hyperlink{class_lists_1_1_linked_list_ad272bdc0b64c162e726591c6b786eacf}{end}}()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{266             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}}(sentinel\_);}
+\DoxyCodeLine{267         \}}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{273         \textcolor{keyword}{const} \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}} \mbox{\hyperlink{class_lists_1_1_linked_list_aa13194181ded7599db70464c94370943}{begin}}()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{274             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}}(sentinel\_-\/>next);}
+\DoxyCodeLine{275         \}}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{281         \textcolor{keyword}{const} \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}} \mbox{\hyperlink{class_lists_1_1_linked_list_a2eb8a5a7f9eaf4ee41ac1944830dd567}{end}}()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{282             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_lists_1_1_linked_list_iterator}{LinkedListIterator<T>}}(sentinel\_);}
+\DoxyCodeLine{283         \}}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285 }
+\DoxyCodeLine{290         \mbox{\hyperlink{class_lists_1_1_linked_list_a1ad3d60b681c9f76d14c0287afd79e0a}{\string~LinkedList}}() \{}
+\DoxyCodeLine{291             \textcolor{keywordflow}{while} (sentinel\_-\/>next != sentinel\_) \{}
+\DoxyCodeLine{292                 \mbox{\hyperlink{class_lists_1_1_linked_list_aadbc27de4629ec1f84c26e90a62fb04b}{PopFront}}();}
+\DoxyCodeLine{293             \}}
+\DoxyCodeLine{294             \textcolor{keyword}{delete} sentinel\_;}
+\DoxyCodeLine{295         \}}
+\DoxyCodeLine{296     \};}
+\DoxyCodeLine{297 }
+\DoxyCodeLine{298 \}}
+
+\end{DoxyCode}

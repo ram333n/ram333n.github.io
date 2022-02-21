@@ -1,0 +1,117 @@
+\hypertarget{class_graphs_1_1_abstract_graph}{}\doxysection{Graphs\+::Abstract\+Graph Class Reference}
+\label{class_graphs_1_1_abstract_graph}\index{Graphs::AbstractGraph@{Graphs::AbstractGraph}}
+
+
+Base class for implementation graph structures.  
+
+
+
+
+{\ttfamily \#include $<$graphs.\+h$>$}
+
+Inheritance diagram for Graphs\+::Abstract\+Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphs_1_1_abstract_graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_graphs_1_1_abstract_graph_a0f7735fa535abfdfa154c4d5361901d8}{Is\+Edge\+Exist}} (int from, int to) const =0
+\item 
+virtual void \mbox{\hyperlink{class_graphs_1_1_abstract_graph_a755d646d8a7f2d7c016c94062be3e782}{Add\+Vertex}} (int number\+\_\+of\+\_\+vertex)=0
+\item 
+virtual void \mbox{\hyperlink{class_graphs_1_1_abstract_graph_a207c5efa3ee3ebccaef64fbd7a645c82}{Add\+Edge}} (int from, int to)=0
+\item 
+virtual void \mbox{\hyperlink{class_graphs_1_1_abstract_graph_a8294df4b81e31695d36691a73bda7844}{Remove\+Vertex}} (int number\+\_\+of\+\_\+vertex)=0
+\item 
+virtual void \mbox{\hyperlink{class_graphs_1_1_abstract_graph_a48bad512dfd02ecf2bba2283075ee245}{Remove\+Edge}} (int from, int to)=0
+\item 
+virtual bool \mbox{\hyperlink{class_graphs_1_1_abstract_graph_a9ecb1e67a89077e72ccc359a26cf2e85}{Is\+Connected}} () const =0
+\item 
+virtual int \mbox{\hyperlink{class_graphs_1_1_abstract_graph_ac52fa855365ba11a83111b2c7ec19305}{Distance\+Between\+Two\+Vertices}} (int from, int to) const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for implementation graph structures. 
+
+This class contains interface of next graph structures \+: adjacency list and adjacency matrix 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graphs_1_1_abstract_graph_a207c5efa3ee3ebccaef64fbd7a645c82}\label{class_graphs_1_1_abstract_graph_a207c5efa3ee3ebccaef64fbd7a645c82}} 
+\index{Graphs::AbstractGraph@{Graphs::AbstractGraph}!AddEdge@{AddEdge}}
+\index{AddEdge@{AddEdge}!Graphs::AbstractGraph@{Graphs::AbstractGraph}}
+\doxysubsubsection{\texorpdfstring{AddEdge()}{AddEdge()}}
+{\footnotesize\ttfamily virtual void Graphs\+::\+Abstract\+Graph\+::\+Add\+Edge (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_graphs_1_1_adjacency_list_a67c8c7d68a8a66722ee38c785116c733}{Graphs\+::\+Adjacency\+List}}, and \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_aee11a564fb6912f15f8894c945d52646}{Graphs\+::\+Adjacency\+Matrix}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_abstract_graph_a755d646d8a7f2d7c016c94062be3e782}\label{class_graphs_1_1_abstract_graph_a755d646d8a7f2d7c016c94062be3e782}} 
+\index{Graphs::AbstractGraph@{Graphs::AbstractGraph}!AddVertex@{AddVertex}}
+\index{AddVertex@{AddVertex}!Graphs::AbstractGraph@{Graphs::AbstractGraph}}
+\doxysubsubsection{\texorpdfstring{AddVertex()}{AddVertex()}}
+{\footnotesize\ttfamily virtual void Graphs\+::\+Abstract\+Graph\+::\+Add\+Vertex (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+vertex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_graphs_1_1_adjacency_list_ab364d9cb63677174e88cb8ca8cba9602}{Graphs\+::\+Adjacency\+List}}, and \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_ad20f91df2e16d0bece0df0245bf61d2c}{Graphs\+::\+Adjacency\+Matrix}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_abstract_graph_ac52fa855365ba11a83111b2c7ec19305}\label{class_graphs_1_1_abstract_graph_ac52fa855365ba11a83111b2c7ec19305}} 
+\index{Graphs::AbstractGraph@{Graphs::AbstractGraph}!DistanceBetweenTwoVertices@{DistanceBetweenTwoVertices}}
+\index{DistanceBetweenTwoVertices@{DistanceBetweenTwoVertices}!Graphs::AbstractGraph@{Graphs::AbstractGraph}}
+\doxysubsubsection{\texorpdfstring{DistanceBetweenTwoVertices()}{DistanceBetweenTwoVertices()}}
+{\footnotesize\ttfamily virtual int Graphs\+::\+Abstract\+Graph\+::\+Distance\+Between\+Two\+Vertices (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_graphs_1_1_adjacency_list_a689aff7d76f665b6d91fddd35dc06108}{Graphs\+::\+Adjacency\+List}}, and \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_aff82cab33ae4fc5bfb3a6964d48c0d7a}{Graphs\+::\+Adjacency\+Matrix}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_abstract_graph_a9ecb1e67a89077e72ccc359a26cf2e85}\label{class_graphs_1_1_abstract_graph_a9ecb1e67a89077e72ccc359a26cf2e85}} 
+\index{Graphs::AbstractGraph@{Graphs::AbstractGraph}!IsConnected@{IsConnected}}
+\index{IsConnected@{IsConnected}!Graphs::AbstractGraph@{Graphs::AbstractGraph}}
+\doxysubsubsection{\texorpdfstring{IsConnected()}{IsConnected()}}
+{\footnotesize\ttfamily virtual bool Graphs\+::\+Abstract\+Graph\+::\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_graphs_1_1_adjacency_list_a7cdbe0b2f0db989df3286641076d7b4b}{Graphs\+::\+Adjacency\+List}}, and \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_a80b24ce049b281fc3c18b5178407594b}{Graphs\+::\+Adjacency\+Matrix}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_abstract_graph_a0f7735fa535abfdfa154c4d5361901d8}\label{class_graphs_1_1_abstract_graph_a0f7735fa535abfdfa154c4d5361901d8}} 
+\index{Graphs::AbstractGraph@{Graphs::AbstractGraph}!IsEdgeExist@{IsEdgeExist}}
+\index{IsEdgeExist@{IsEdgeExist}!Graphs::AbstractGraph@{Graphs::AbstractGraph}}
+\doxysubsubsection{\texorpdfstring{IsEdgeExist()}{IsEdgeExist()}}
+{\footnotesize\ttfamily virtual bool Graphs\+::\+Abstract\+Graph\+::\+Is\+Edge\+Exist (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_graphs_1_1_adjacency_list_a1abcc5824746f9b579f655edaa289a74}{Graphs\+::\+Adjacency\+List}}, and \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_a187bcaf1bec785d4cc58810b83b425f3}{Graphs\+::\+Adjacency\+Matrix}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_abstract_graph_a48bad512dfd02ecf2bba2283075ee245}\label{class_graphs_1_1_abstract_graph_a48bad512dfd02ecf2bba2283075ee245}} 
+\index{Graphs::AbstractGraph@{Graphs::AbstractGraph}!RemoveEdge@{RemoveEdge}}
+\index{RemoveEdge@{RemoveEdge}!Graphs::AbstractGraph@{Graphs::AbstractGraph}}
+\doxysubsubsection{\texorpdfstring{RemoveEdge()}{RemoveEdge()}}
+{\footnotesize\ttfamily virtual void Graphs\+::\+Abstract\+Graph\+::\+Remove\+Edge (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_graphs_1_1_adjacency_list_a19d7b564a150778edba72f9a2adb10f4}{Graphs\+::\+Adjacency\+List}}, and \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_a9f85080d3f34c5945b7a3ca6c68ffe1e}{Graphs\+::\+Adjacency\+Matrix}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_abstract_graph_a8294df4b81e31695d36691a73bda7844}\label{class_graphs_1_1_abstract_graph_a8294df4b81e31695d36691a73bda7844}} 
+\index{Graphs::AbstractGraph@{Graphs::AbstractGraph}!RemoveVertex@{RemoveVertex}}
+\index{RemoveVertex@{RemoveVertex}!Graphs::AbstractGraph@{Graphs::AbstractGraph}}
+\doxysubsubsection{\texorpdfstring{RemoveVertex()}{RemoveVertex()}}
+{\footnotesize\ttfamily virtual void Graphs\+::\+Abstract\+Graph\+::\+Remove\+Vertex (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+vertex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_graphs_1_1_adjacency_list_a41c395060b5086225c4dbddf51f2286e}{Graphs\+::\+Adjacency\+List}}, and \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_a9b72dbf2ae0de9e4af3b7e2d92ad84ea}{Graphs\+::\+Adjacency\+Matrix}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{graphs_8h}{graphs.\+h}}\end{DoxyCompactItemize}

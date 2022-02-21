@@ -1,0 +1,212 @@
+\hypertarget{class_graphs_1_1_adjacency_matrix}{}\doxysection{Graphs\+::Adjacency\+Matrix Class Reference}
+\label{class_graphs_1_1_adjacency_matrix}\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+
+
+Class with implementation of adjacency matrix structure.  
+
+
+
+
+{\ttfamily \#include $<$graphs.\+h$>$}
+
+Inheritance diagram for Graphs\+::Adjacency\+Matrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphs_1_1_adjacency_matrix}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_a271cc9cfff311f9160e0342136244004}\label{class_graphs_1_1_adjacency_matrix_a271cc9cfff311f9160e0342136244004}} 
+{\bfseries Adjacency\+Matrix} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_adade86bfa5283a1b4f701e1f09070e20}{Adjacency\+Matrix}} (size\+\_\+t number\+\_\+of\+\_\+vertices)
+\begin{DoxyCompactList}\small\item\em Constructs adjacency matrix by count of vertices. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_a187bcaf1bec785d4cc58810b83b425f3}{Is\+Edge\+Exist}} (int from, int to) const override
+\begin{DoxyCompactList}\small\item\em Checks if the edge with input vertices exists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_ad20f91df2e16d0bece0df0245bf61d2c}{Add\+Vertex}} (int number\+\_\+of\+\_\+vertex) override
+\begin{DoxyCompactList}\small\item\em Adds vertex to the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_aee11a564fb6912f15f8894c945d52646}{Add\+Edge}} (int from, int to) override
+\begin{DoxyCompactList}\small\item\em Adds edge from first vertex to second. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_a9b72dbf2ae0de9e4af3b7e2d92ad84ea}{Remove\+Vertex}} (int number\+\_\+of\+\_\+vertex) override
+\begin{DoxyCompactList}\small\item\em Removes vertex with adjacent edges. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_a9f85080d3f34c5945b7a3ca6c68ffe1e}{Remove\+Edge}} (int from, int to) override
+\begin{DoxyCompactList}\small\item\em Removes edge, which connects two corresponding vertices. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_a80b24ce049b281fc3c18b5178407594b}{Is\+Connected}} () const override
+\begin{DoxyCompactList}\small\item\em Checks if the graph is connected. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graphs_1_1_adjacency_matrix_aff82cab33ae4fc5bfb3a6964d48c0d7a}{Distance\+Between\+Two\+Vertices}} (int from, int to) const override
+\begin{DoxyCompactList}\small\item\em Evaluates distance between two vertices(count of edges in the shortest path, which connects them) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class with implementation of adjacency matrix structure. 
+
+Implemented, as a square matrix of logical value, in which element with i\+\_\+th row and j\+\_\+th column equals true, when vertices i and j are connected. Otherwise, false.
+
+The order of the adjacency matrix is equal to maximum count of vertices in graph 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_adade86bfa5283a1b4f701e1f09070e20}\label{class_graphs_1_1_adjacency_matrix_adade86bfa5283a1b4f701e1f09070e20}} 
+\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}!AdjacencyMatrix@{AdjacencyMatrix}}
+\index{AdjacencyMatrix@{AdjacencyMatrix}!Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+\doxysubsubsection{\texorpdfstring{AdjacencyMatrix()}{AdjacencyMatrix()}}
+{\footnotesize\ttfamily Graphs\+::\+Adjacency\+Matrix\+::\+Adjacency\+Matrix (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{number\+\_\+of\+\_\+vertices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs adjacency matrix by count of vertices. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em number\+\_\+of\+\_\+vertices} & Count of vertices of graph \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_aee11a564fb6912f15f8894c945d52646}\label{class_graphs_1_1_adjacency_matrix_aee11a564fb6912f15f8894c945d52646}} 
+\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}!AddEdge@{AddEdge}}
+\index{AddEdge@{AddEdge}!Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+\doxysubsubsection{\texorpdfstring{AddEdge()}{AddEdge()}}
+{\footnotesize\ttfamily void Graphs\+::\+Adjacency\+Matrix\+::\+Add\+Edge (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds edge from first vertex to second. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & Number of the first vertex \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & Number of the second vertex\\
+\hline
+\end{DoxyParams}
+If edge exists or number of one of these vertices greater or equal, than order of adjacency matrix, method doesn\textquotesingle{}t change the object. 
+
+Implements \mbox{\hyperlink{class_graphs_1_1_abstract_graph}{Graphs\+::\+Abstract\+Graph}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_ad20f91df2e16d0bece0df0245bf61d2c}\label{class_graphs_1_1_adjacency_matrix_ad20f91df2e16d0bece0df0245bf61d2c}} 
+\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}!AddVertex@{AddVertex}}
+\index{AddVertex@{AddVertex}!Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+\doxysubsubsection{\texorpdfstring{AddVertex()}{AddVertex()}}
+{\footnotesize\ttfamily void Graphs\+::\+Adjacency\+Matrix\+::\+Add\+Vertex (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+vertex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds vertex to the graph. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em number\+\_\+of\+\_\+vertex} & Number of vertex\\
+\hline
+\end{DoxyParams}
+If vertex already exists or it\textquotesingle{}s number greater or equal, than order of adjacency matrix, method doesn\textquotesingle{}t change the object 
+
+Implements \mbox{\hyperlink{class_graphs_1_1_abstract_graph}{Graphs\+::\+Abstract\+Graph}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_aff82cab33ae4fc5bfb3a6964d48c0d7a}\label{class_graphs_1_1_adjacency_matrix_aff82cab33ae4fc5bfb3a6964d48c0d7a}} 
+\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}!DistanceBetweenTwoVertices@{DistanceBetweenTwoVertices}}
+\index{DistanceBetweenTwoVertices@{DistanceBetweenTwoVertices}!Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+\doxysubsubsection{\texorpdfstring{DistanceBetweenTwoVertices()}{DistanceBetweenTwoVertices()}}
+{\footnotesize\ttfamily int Graphs\+::\+Adjacency\+Matrix\+::\+Distance\+Between\+Two\+Vertices (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Evaluates distance between two vertices(count of edges in the shortest path, which connects them) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & Number of the first vertex \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & Number of the second vertex\\
+\hline
+\end{DoxyParams}
+Method based on breadth first search algorithm, which modified to count the distance between vertices
+
+Returns distance between vertices, if they are connected. Otherwise, returns 0 
+
+Implements \mbox{\hyperlink{class_graphs_1_1_abstract_graph}{Graphs\+::\+Abstract\+Graph}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_a80b24ce049b281fc3c18b5178407594b}\label{class_graphs_1_1_adjacency_matrix_a80b24ce049b281fc3c18b5178407594b}} 
+\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}!IsConnected@{IsConnected}}
+\index{IsConnected@{IsConnected}!Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+\doxysubsubsection{\texorpdfstring{IsConnected()}{IsConnected()}}
+{\footnotesize\ttfamily bool Graphs\+::\+Adjacency\+Matrix\+::\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the graph is connected. 
+
+Method based on depth first search algorithm, which modified to count the number of connected components. If the count of connected components greater, than 1, then graph isn\textquotesingle{}t connected.
+
+Returns true, if graph is connected. Otherwise, false 
+
+Implements \mbox{\hyperlink{class_graphs_1_1_abstract_graph}{Graphs\+::\+Abstract\+Graph}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_a187bcaf1bec785d4cc58810b83b425f3}\label{class_graphs_1_1_adjacency_matrix_a187bcaf1bec785d4cc58810b83b425f3}} 
+\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}!IsEdgeExist@{IsEdgeExist}}
+\index{IsEdgeExist@{IsEdgeExist}!Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+\doxysubsubsection{\texorpdfstring{IsEdgeExist()}{IsEdgeExist()}}
+{\footnotesize\ttfamily bool Graphs\+::\+Adjacency\+Matrix\+::\+Is\+Edge\+Exist (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the edge with input vertices exists. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & Number of the first vertex \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & Number of the second vertex\\
+\hline
+\end{DoxyParams}
+Returns true, if the edge exists, otherwise false 
+
+Implements \mbox{\hyperlink{class_graphs_1_1_abstract_graph}{Graphs\+::\+Abstract\+Graph}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_a9f85080d3f34c5945b7a3ca6c68ffe1e}\label{class_graphs_1_1_adjacency_matrix_a9f85080d3f34c5945b7a3ca6c68ffe1e}} 
+\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}!RemoveEdge@{RemoveEdge}}
+\index{RemoveEdge@{RemoveEdge}!Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+\doxysubsubsection{\texorpdfstring{RemoveEdge()}{RemoveEdge()}}
+{\footnotesize\ttfamily void Graphs\+::\+Adjacency\+Matrix\+::\+Remove\+Edge (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes edge, which connects two corresponding vertices. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & Number of the first vertex \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & Number of the second vertex\\
+\hline
+\end{DoxyParams}
+If edge doesn\textquotesingle{}t exist or number of one of these vertices greater or equal, than order of adjacency matrix, method doesn\textquotesingle{}t change the object. 
+
+Implements \mbox{\hyperlink{class_graphs_1_1_abstract_graph}{Graphs\+::\+Abstract\+Graph}}.
+
+\mbox{\Hypertarget{class_graphs_1_1_adjacency_matrix_a9b72dbf2ae0de9e4af3b7e2d92ad84ea}\label{class_graphs_1_1_adjacency_matrix_a9b72dbf2ae0de9e4af3b7e2d92ad84ea}} 
+\index{Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}!RemoveVertex@{RemoveVertex}}
+\index{RemoveVertex@{RemoveVertex}!Graphs::AdjacencyMatrix@{Graphs::AdjacencyMatrix}}
+\doxysubsubsection{\texorpdfstring{RemoveVertex()}{RemoveVertex()}}
+{\footnotesize\ttfamily void Graphs\+::\+Adjacency\+Matrix\+::\+Remove\+Vertex (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+vertex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes vertex with adjacent edges. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em number\+\_\+of\+\_\+vertex} & Number of the vertex to remove\\
+\hline
+\end{DoxyParams}
+If vertex doesn\textquotesingle{}t exist or number of vertex greater or equal, than order of adjacency matrix, method doesn\textquotesingle{}t change the object. 
+
+Implements \mbox{\hyperlink{class_graphs_1_1_abstract_graph}{Graphs\+::\+Abstract\+Graph}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{graphs_8h}{graphs.\+h}}\end{DoxyCompactItemize}
