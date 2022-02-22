@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 - формы</title>
+    <style>
+        .header {
+            font-family : Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .subscription {
+            font-style: italic;
+        }
+
+        .required{
+            color:red;
+        }
+        
+        .td{
+            width : 100px;
+        }
+
+        .input_field{
+            width : 200px;
+            height : 15px;
+        }
+
+        .list{
+            width : 208px;
+            height : 20px;    
+        }
+
+        .text_area{
+            width: 202px;
+            height: 70px;
+        }
+
+        .submit_button{
+            width : 200px;
+            height : 45px;
+        }
+    </style>
+</head>
+<body>
+    <table align = "center">
+        <tr>
+            <td>
+                <h1 class="header">Форма заявки на работу в зоопарке</h1>
+                <span class="subscription">Пожалуйста, заполните форму. Обязательны поля помечены<span class="required">*</span></span>
+            </td>
+        </tr>
+
+        <form>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Контактная информация</legend>
+                        <table>
+                            <tr>
+                                <p><td class="td"><label>Имя<span class="required">*</span></label></td><td><input type ="text" class="input_field"></td></p>
+                            </tr>
+
+                            <tr>
+                                <p><td class="td"><label>Телефон</label></td><td><input type ="tel" class="input_field"></td></p>
+                            </tr>
+
+                            <tr>
+                                <p><td class="td"><label>Email<span class="required">*</span></label></td><td><input type ="email" class="input_field"></td></p>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Персональная информация</legend>
+                        <table>
+                            <tr>
+                                <p><td class="td"><label>Возраст<span class="required">*</span></label></td><td><input type="number" class="input_field"></td></p>
+                            </tr>
+
+                            <tr>
+                                <p><td class="td"><label>Пол</label></td><td>
+                                    <select class="list">
+                                        <option value="male">Мужской</option>
+                                        <option value="female">Женский</option>
+                                    </select>
+                                </td></p>
+                            </tr>
+
+                            <tr>
+                                <p>
+                                    <td class="td"><label><p>Перечислите<br>личные<br>качества</p></label></td><td><textarea class="text_area"></textarea></td>
+                                </p>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Выберите ваших любимых животных</legend>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox"></td><td><label>Зебра</label></td>
+                                <td><input type="checkbox"></td><td><label>Кошак</label></td>
+                                <td><input type="checkbox"></td><td><label>Анаконда</label></td>
+                                <td><input type="checkbox"></td><td><label>Человек</label></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox"></td><td><label>Слон</label></td>
+                                <td><input type="checkbox"></td><td><label>Антилопа</label></td>
+                                <td><input type="checkbox"></td><td><label>Голубь</label></td>
+                                <td><input type="checkbox"></td><td><label>Краб</label></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" class = "submit_button" value="Отправить информацию">
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
