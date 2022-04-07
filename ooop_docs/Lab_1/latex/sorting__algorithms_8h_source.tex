@@ -1,0 +1,77 @@
+\hypertarget{sorting__algorithms_8h_source}{}\doxysection{sorting\+\_\+algorithms.\+h}
+\mbox{\hyperlink{sorting__algorithms_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{linked__list_8h}{linked\_list.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{array__list_8h}{array\_list.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_sort}{Sort}} \{}
+\DoxyCodeLine{27     \textcolor{keyword}{template}<\textcolor{keyword}{typename} Iterator, \textcolor{keyword}{typename} Comparator>}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_sort_a9249c6d5ce45968f44b1cd34958711da}{InsertionSort}}(Iterator range\_begin, Iterator range\_end, Comparator comparator) \{}
+\DoxyCodeLine{29         \textcolor{keyword}{using} Type = \textcolor{keyword}{typename} Iterator::value\_type;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \textcolor{keywordflow}{if} (range\_begin == range\_end) \{}
+\DoxyCodeLine{32             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         Type to\_insert;}
+\DoxyCodeLine{36         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} cur\_item = std::next(range\_begin); cur\_item != range\_end; ++cur\_item) \{}
+\DoxyCodeLine{37             to\_insert = *cur\_item;}
+\DoxyCodeLine{38             \textcolor{keyword}{auto} it = std::prev(cur\_item);}
+\DoxyCodeLine{39             \textcolor{keywordtype}{bool} is\_end = \textcolor{keyword}{false};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41             \textcolor{keywordflow}{while} (comparator(to\_insert, *it)) \{}
+\DoxyCodeLine{42                 *std::next(it) = *it;}
+\DoxyCodeLine{43                 \textcolor{keywordflow}{if} (it == range\_begin) \{}
+\DoxyCodeLine{44                     is\_end = \textcolor{keyword}{true};}
+\DoxyCodeLine{45                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{46                 \}}
+\DoxyCodeLine{47                 it-\/-\/;}
+\DoxyCodeLine{48             \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50             it = is\_end ? range\_begin : std::next(it);}
+\DoxyCodeLine{51             *it = to\_insert;}
+\DoxyCodeLine{52         \}}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{64     \textcolor{keyword}{template} <\textcolor{keyword}{typename} List, \textcolor{keyword}{typename} Iterator, \textcolor{keyword}{typename} Comparator>}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_sort_a1b8c53df49d50466325307e3c7b34bcd}{MergeSort}}(Iterator range\_begin, Iterator range\_end, Comparator comparator) \{}
+\DoxyCodeLine{66         \textcolor{keywordtype}{int} range\_length = std::distance(range\_begin, range\_end);}
+\DoxyCodeLine{67         \textcolor{keywordflow}{if} (range\_length < 2) \{}
+\DoxyCodeLine{68             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71         List elements(range\_begin, range\_end);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73         Iterator mid = std::next(elements.begin(), range\_length / 2);}
+\DoxyCodeLine{74         MergeSort<List>(elements.begin(), mid, comparator);}
+\DoxyCodeLine{75         MergeSort<List>(mid, elements.end(), comparator);}
+\DoxyCodeLine{76         std::merge(elements.begin(), mid, mid, elements.end(), range\_begin, comparator);}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{86     \textcolor{keyword}{template}<\textcolor{keyword}{typename} Iterator, \textcolor{keyword}{typename} Comparator>}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_sort_affa46cf3ed4eca98a33d5d8ec00a1f47}{QuickSort}}(Iterator range\_begin, Iterator range\_end, Comparator comparator) \{}
+\DoxyCodeLine{88         \textcolor{keywordflow}{if} (range\_begin != range\_end) \{}
+\DoxyCodeLine{89             \textcolor{keyword}{auto} pivot = *std::next(range\_begin, std::distance(range\_begin, range\_end) / 2);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91             \textcolor{keyword}{auto} first\_border = std::partition(range\_begin, range\_end,}
+\DoxyCodeLine{92                 [pivot, \&comparator](\textcolor{keyword}{const} \textcolor{keyword}{auto}\& lhs) \{}
+\DoxyCodeLine{93                     \textcolor{keywordflow}{return} comparator(lhs, pivot);}
+\DoxyCodeLine{94                 \});}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96             \textcolor{keyword}{auto} second\_border = std::partition(first\_border, range\_end,}
+\DoxyCodeLine{97                 [pivot, \&comparator](\textcolor{keyword}{const} \textcolor{keyword}{auto}\& rhs) \{}
+\DoxyCodeLine{98                     \textcolor{keywordflow}{return} !comparator(pivot, rhs);}
+\DoxyCodeLine{99                 \});}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101             \mbox{\hyperlink{namespace_sort_affa46cf3ed4eca98a33d5d8ec00a1f47}{QuickSort}}(range\_begin, first\_border, comparator);}
+\DoxyCodeLine{102             \mbox{\hyperlink{namespace_sort_affa46cf3ed4eca98a33d5d8ec00a1f47}{QuickSort}}(second\_border, range\_end, comparator);}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105 \}}
+
+\end{DoxyCode}

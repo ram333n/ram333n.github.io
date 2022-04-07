@@ -1,0 +1,32 @@
+\hypertarget{sorting__algorithms_8h}{}\doxysection{sorting\+\_\+algorithms.\+h File Reference}
+\label{sorting__algorithms_8h}\index{sorting\_algorithms.h@{sorting\_algorithms.h}}
+
+
+Header file with implementation of some sorting algorithms.  
+
+
+{\ttfamily \#include \char`\"{}linked\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}array\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_sort}{Sort}}
+\begin{DoxyCompactList}\small\item\em Contains implementation of sorting algorithms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Iterator , typename Comparator $>$ }\\void \mbox{\hyperlink{namespace_sort_a9249c6d5ce45968f44b1cd34958711da}{Sort\+::\+Insertion\+Sort}} (Iterator range\+\_\+begin, Iterator range\+\_\+end, Comparator comparator)
+\begin{DoxyCompactList}\small\item\em Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using insertion sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename List , typename Iterator , typename Comparator $>$ }\\void \mbox{\hyperlink{namespace_sort_a1b8c53df49d50466325307e3c7b34bcd}{Sort\+::\+Merge\+Sort}} (Iterator range\+\_\+begin, Iterator range\+\_\+end, Comparator comparator)
+\begin{DoxyCompactList}\small\item\em Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using merge sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename Comparator $>$ }\\void \mbox{\hyperlink{namespace_sort_affa46cf3ed4eca98a33d5d8ec00a1f47}{Sort\+::\+Quick\+Sort}} (Iterator range\+\_\+begin, Iterator range\+\_\+end, Comparator comparator)
+\begin{DoxyCompactList}\small\item\em Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using quick sort algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file with implementation of some sorting algorithms. 
+
+Contains insertion sort, merge sort and quick sort algorithms 

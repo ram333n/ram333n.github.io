@@ -1,0 +1,145 @@
+\hypertarget{class_lists_1_1_abstract_list}{}\doxysection{Lists\+::Abstract\+List\texorpdfstring{$<$}{<} T, Iterator \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_lists_1_1_abstract_list}\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+
+
+Base class for implementation lists.  
+
+
+
+
+{\ttfamily \#include $<$abstract\+\_\+list.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a549e9dcfeb978e36141eaa88dfdb0ced}\label{class_lists_1_1_abstract_list_a549e9dcfeb978e36141eaa88dfdb0ced}} 
+bool {\bfseries Empty} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the list is empty. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a649262e10bfa86ef081124fd57e0bb0a}\label{class_lists_1_1_abstract_list_a649262e10bfa86ef081124fd57e0bb0a}} 
+size\+\_\+t {\bfseries Size} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the list. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_lists_1_1_abstract_list_a82bb8dec5d98d661864b57616afa1949}{Push\+Back}} (T to\+\_\+insert)=0
+\item 
+virtual void \mbox{\hyperlink{class_lists_1_1_abstract_list_aa32ce688a94f2ad222043e814b13c943}{Insert}} (T to\+\_\+insert, Iterator pos)=0
+\item 
+virtual void \mbox{\hyperlink{class_lists_1_1_abstract_list_a5770a6312ef567061686dabb9af1acb4}{Remove}} (Iterator pos)=0
+\item 
+virtual void \mbox{\hyperlink{class_lists_1_1_abstract_list_a461aca753c1f108ea141d3808aa8d54d}{Pop\+Back}} ()=0
+\item 
+virtual Iterator \mbox{\hyperlink{class_lists_1_1_abstract_list_a1a02b42b208d138972953a4904a735b6}{begin}} ()=0
+\item 
+virtual Iterator \mbox{\hyperlink{class_lists_1_1_abstract_list_a2463fbb07ca03fa6d5afdf01a66c1ecb}{end}} ()=0
+\item 
+virtual const Iterator \mbox{\hyperlink{class_lists_1_1_abstract_list_a72fd7983b687325118d14846b9e1cf76}{begin}} () const =0
+\item 
+virtual const Iterator \mbox{\hyperlink{class_lists_1_1_abstract_list_a034aef8e2ddb3bb5f3e275f2abbaedcb}{end}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a0a7d13790c362bdee42908faec45113d}\label{class_lists_1_1_abstract_list_a0a7d13790c362bdee42908faec45113d}} 
+size\+\_\+t {\bfseries size\+\_\+} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Iterator$>$\newline
+class Lists\+::\+Abstract\+List$<$ T, Iterator $>$}
+Base class for implementation lists. 
+
+This class contains joint interface of next lists \+: \mbox{\hyperlink{class_lists_1_1_array_list}{Array\+List}} and \mbox{\hyperlink{class_lists_1_1_linked_list}{Linked\+List}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a72fd7983b687325118d14846b9e1cf76}\label{class_lists_1_1_abstract_list_a72fd7983b687325118d14846b9e1cf76}} 
+\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}!begin@{begin}}
+\index{begin@{begin}!Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Iterator $>$ \\
+virtual const Iterator \mbox{\hyperlink{class_lists_1_1_abstract_list}{Lists\+::\+Abstract\+List}}$<$ T, Iterator $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lists_1_1_array_list_a1564dba036a66bf5b8e8fd1e0ff67aff}{Lists\+::\+Array\+List$<$ T $>$}}, and \mbox{\hyperlink{class_lists_1_1_linked_list_aa13194181ded7599db70464c94370943}{Lists\+::\+Linked\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a1a02b42b208d138972953a4904a735b6}\label{class_lists_1_1_abstract_list_a1a02b42b208d138972953a4904a735b6}} 
+\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}!begin@{begin}}
+\index{begin@{begin}!Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Iterator $>$ \\
+virtual Iterator \mbox{\hyperlink{class_lists_1_1_abstract_list}{Lists\+::\+Abstract\+List}}$<$ T, Iterator $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lists_1_1_array_list_ad2973753e4146bfa2ba2e3db044e3f2f}{Lists\+::\+Array\+List$<$ T $>$}}, and \mbox{\hyperlink{class_lists_1_1_linked_list_a8d7232b1e18112b2c41f84c8a297e897}{Lists\+::\+Linked\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a034aef8e2ddb3bb5f3e275f2abbaedcb}\label{class_lists_1_1_abstract_list_a034aef8e2ddb3bb5f3e275f2abbaedcb}} 
+\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}!end@{end}}
+\index{end@{end}!Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Iterator $>$ \\
+virtual const Iterator \mbox{\hyperlink{class_lists_1_1_abstract_list}{Lists\+::\+Abstract\+List}}$<$ T, Iterator $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lists_1_1_array_list_a5250eb240d0919e094352bd2fbe9aa1e}{Lists\+::\+Array\+List$<$ T $>$}}, and \mbox{\hyperlink{class_lists_1_1_linked_list_a2eb8a5a7f9eaf4ee41ac1944830dd567}{Lists\+::\+Linked\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a2463fbb07ca03fa6d5afdf01a66c1ecb}\label{class_lists_1_1_abstract_list_a2463fbb07ca03fa6d5afdf01a66c1ecb}} 
+\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}!end@{end}}
+\index{end@{end}!Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Iterator $>$ \\
+virtual Iterator \mbox{\hyperlink{class_lists_1_1_abstract_list}{Lists\+::\+Abstract\+List}}$<$ T, Iterator $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lists_1_1_array_list_a0192b2851abfa463c4f0afb096052773}{Lists\+::\+Array\+List$<$ T $>$}}, and \mbox{\hyperlink{class_lists_1_1_linked_list_ad272bdc0b64c162e726591c6b786eacf}{Lists\+::\+Linked\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_aa32ce688a94f2ad222043e814b13c943}\label{class_lists_1_1_abstract_list_aa32ce688a94f2ad222043e814b13c943}} 
+\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename T , typename Iterator $>$ \\
+virtual void \mbox{\hyperlink{class_lists_1_1_abstract_list}{Lists\+::\+Abstract\+List}}$<$ T, Iterator $>$\+::\+Insert (\begin{DoxyParamCaption}\item[{T}]{to\+\_\+insert,  }\item[{Iterator}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lists_1_1_array_list_a5ca52bd6d8bb8efae1c6351a25c6d6f2}{Lists\+::\+Array\+List$<$ T $>$}}, and \mbox{\hyperlink{class_lists_1_1_linked_list_a5a5a30ff8d52273ee043e33c596afe19}{Lists\+::\+Linked\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a461aca753c1f108ea141d3808aa8d54d}\label{class_lists_1_1_abstract_list_a461aca753c1f108ea141d3808aa8d54d}} 
+\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}!PopBack@{PopBack}}
+\index{PopBack@{PopBack}!Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+\doxysubsubsection{\texorpdfstring{PopBack()}{PopBack()}}
+{\footnotesize\ttfamily template$<$typename T , typename Iterator $>$ \\
+virtual void \mbox{\hyperlink{class_lists_1_1_abstract_list}{Lists\+::\+Abstract\+List}}$<$ T, Iterator $>$\+::\+Pop\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lists_1_1_array_list_a73418731bc25840f0db85a6de818d153}{Lists\+::\+Array\+List$<$ T $>$}}, and \mbox{\hyperlink{class_lists_1_1_linked_list_a1134e37c70b01d74500e441b60edf207}{Lists\+::\+Linked\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a82bb8dec5d98d661864b57616afa1949}\label{class_lists_1_1_abstract_list_a82bb8dec5d98d661864b57616afa1949}} 
+\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}!PushBack@{PushBack}}
+\index{PushBack@{PushBack}!Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+\doxysubsubsection{\texorpdfstring{PushBack()}{PushBack()}}
+{\footnotesize\ttfamily template$<$typename T , typename Iterator $>$ \\
+virtual void \mbox{\hyperlink{class_lists_1_1_abstract_list}{Lists\+::\+Abstract\+List}}$<$ T, Iterator $>$\+::\+Push\+Back (\begin{DoxyParamCaption}\item[{T}]{to\+\_\+insert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lists_1_1_linked_list_a2c064a52dc7a65609325d2a7a2ffbb40}{Lists\+::\+Linked\+List$<$ T $>$}}, and \mbox{\hyperlink{class_lists_1_1_array_list_ad894f7261c2028b59dc6e909bb0e5795}{Lists\+::\+Array\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_lists_1_1_abstract_list_a5770a6312ef567061686dabb9af1acb4}\label{class_lists_1_1_abstract_list_a5770a6312ef567061686dabb9af1acb4}} 
+\index{Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!Lists::AbstractList$<$ T, Iterator $>$@{Lists::AbstractList$<$ T, Iterator $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename T , typename Iterator $>$ \\
+virtual void \mbox{\hyperlink{class_lists_1_1_abstract_list}{Lists\+::\+Abstract\+List}}$<$ T, Iterator $>$\+::\+Remove (\begin{DoxyParamCaption}\item[{Iterator}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_lists_1_1_array_list_a3fd096d45cddbac28c5c17fa7de74ced}{Lists\+::\+Array\+List$<$ T $>$}}, and \mbox{\hyperlink{class_lists_1_1_linked_list_a0e560fe24fde331c3359c1f219128ea6}{Lists\+::\+Linked\+List$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{abstract__list_8h}{abstract\+\_\+list.\+h}}\end{DoxyCompactItemize}

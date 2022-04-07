@@ -1,0 +1,93 @@
+\hypertarget{namespace_sort}{}\doxysection{Sort Namespace Reference}
+\label{namespace_sort}\index{Sort@{Sort}}
+
+
+Contains implementation of sorting algorithms.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Iterator , typename Comparator $>$ }\\void \mbox{\hyperlink{namespace_sort_a9249c6d5ce45968f44b1cd34958711da}{Insertion\+Sort}} (Iterator range\+\_\+begin, Iterator range\+\_\+end, Comparator comparator)
+\begin{DoxyCompactList}\small\item\em Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using insertion sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename List , typename Iterator , typename Comparator $>$ }\\void \mbox{\hyperlink{namespace_sort_a1b8c53df49d50466325307e3c7b34bcd}{Merge\+Sort}} (Iterator range\+\_\+begin, Iterator range\+\_\+end, Comparator comparator)
+\begin{DoxyCompactList}\small\item\em Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using merge sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename Comparator $>$ }\\void \mbox{\hyperlink{namespace_sort_affa46cf3ed4eca98a33d5d8ec00a1f47}{Quick\+Sort}} (Iterator range\+\_\+begin, Iterator range\+\_\+end, Comparator comparator)
+\begin{DoxyCompactList}\small\item\em Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using quick sort algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains implementation of sorting algorithms. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_sort_a9249c6d5ce45968f44b1cd34958711da}\label{namespace_sort_a9249c6d5ce45968f44b1cd34958711da}} 
+\index{Sort@{Sort}!InsertionSort@{InsertionSort}}
+\index{InsertionSort@{InsertionSort}!Sort@{Sort}}
+\doxysubsubsection{\texorpdfstring{InsertionSort()}{InsertionSort()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename Comparator $>$ \\
+void Sort\+::\+Insertion\+Sort (\begin{DoxyParamCaption}\item[{Iterator}]{range\+\_\+begin,  }\item[{Iterator}]{range\+\_\+end,  }\item[{Comparator}]{comparator }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using insertion sort algorithm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em range\+\_\+begin} & Begin of the range \\
+\hline
+\mbox{\texttt{ in}}  & {\em range\+\_\+end} & End of the range \\
+\hline
+\mbox{\texttt{ in}}  & {\em range\+\_\+begin} & Comparison function object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Iterator must meet the requirements of bidirectional iterator 
+\end{DoxyWarning}
+\mbox{\Hypertarget{namespace_sort_a1b8c53df49d50466325307e3c7b34bcd}\label{namespace_sort_a1b8c53df49d50466325307e3c7b34bcd}} 
+\index{Sort@{Sort}!MergeSort@{MergeSort}}
+\index{MergeSort@{MergeSort}!Sort@{Sort}}
+\doxysubsubsection{\texorpdfstring{MergeSort()}{MergeSort()}}
+{\footnotesize\ttfamily template$<$typename List , typename Iterator , typename Comparator $>$ \\
+void Sort\+::\+Merge\+Sort (\begin{DoxyParamCaption}\item[{Iterator}]{range\+\_\+begin,  }\item[{Iterator}]{range\+\_\+end,  }\item[{Comparator}]{comparator }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using merge sort algorithm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em range\+\_\+begin} & Begin of the range \\
+\hline
+\mbox{\texttt{ in}}  & {\em range\+\_\+end} & End of the range \\
+\hline
+\mbox{\texttt{ in}}  & {\em range\+\_\+begin} & Comparison function object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Iterator must meet the requirements of bidirectional iterator. 
+
+List must have constructor, which takes two iterators \textquotesingle{}first, last\textquotesingle{} and constructs List with the contents of the range \mbox{[}first, last) 
+\end{DoxyWarning}
+\mbox{\Hypertarget{namespace_sort_affa46cf3ed4eca98a33d5d8ec00a1f47}\label{namespace_sort_affa46cf3ed4eca98a33d5d8ec00a1f47}} 
+\index{Sort@{Sort}!QuickSort@{QuickSort}}
+\index{QuickSort@{QuickSort}!Sort@{Sort}}
+\doxysubsubsection{\texorpdfstring{QuickSort()}{QuickSort()}}
+{\footnotesize\ttfamily template$<$typename Iterator , typename Comparator $>$ \\
+void Sort\+::\+Quick\+Sort (\begin{DoxyParamCaption}\item[{Iterator}]{range\+\_\+begin,  }\item[{Iterator}]{range\+\_\+end,  }\item[{Comparator}]{comparator }\end{DoxyParamCaption})}
+
+
+
+Sorts the elements in the range \mbox{[}range\+\_\+begin, range\+\_\+end), using quick sort algorithm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em range\+\_\+begin} & Begin of the range \\
+\hline
+\mbox{\texttt{ in}}  & {\em range\+\_\+end} & End of the range \\
+\hline
+\mbox{\texttt{ in}}  & {\em range\+\_\+begin} & Comparison function object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Iterator must meet the requirements of bidirectional iterator 
+\end{DoxyWarning}
