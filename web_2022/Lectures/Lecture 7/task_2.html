@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+
+    <style>
+        .container_with_repeat{
+            display : grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 200px);         
+        }
+        
+        .container_without_repeat{
+            display : grid;
+            gap: 20px;
+            grid-template-columns: 200px 200px 200px;      
+        }
+
+        .item {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>With repeat</h1>
+    <div class="container_with_repeat">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+
+    <h1>Without repeat</h1>
+    <div class="container_without_repeat">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+</html>

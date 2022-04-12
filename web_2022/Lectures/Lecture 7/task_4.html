@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+
+    <style>
+        .container_1{
+            display : grid;
+            gap: 20px;       
+            width : 800px;
+            grid-template-areas: 
+                    ". . d d d d d"
+                    "b b b . . . a"
+                    "c c c c c . e";
+        }
+
+        .container_2{
+            display : grid;
+            gap: 20px;       
+            width : 800px;
+            grid-template-areas: 
+                    "b . d d d . a"
+                    "b . . . . . a"
+                    "b . c . . . ."
+                    "b . c . . . e";
+        }
+
+        .item_1 {
+            background-color: orange;
+            grid-area: a;
+        }
+
+        .item_2 {
+            background-color: orange;
+            grid-area: b;
+        }
+
+        .item_3 {
+            background-color: orange;
+            grid-area: c;
+        }
+        
+        .item_4 {
+            background-color: orange;
+            grid-area: d;
+        }
+
+        .item_5 {
+            background-color: orange;
+            grid-area: e;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Subtask 1</h1>
+
+    <div class="container_1">
+        <div class="item_1">1</div>
+        <div class="item_2">2</div>
+        <div class="item_3">3</div>
+        <div class="item_4">4</div>
+        <div class="item_5">5</div>
+    </div>
+    <h1>Subtask 2</h1>
+
+    <div class="container_2">
+        <div class="item_1">1</div>
+        <div class="item_2">2</div>
+        <div class="item_3">3</div>
+        <div class="item_4">4</div>
+        <div class="item_5">5</div>
+    </div>
+</body>
+</html>
