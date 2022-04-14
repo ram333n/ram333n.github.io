@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            background-color: rgb(101, 129, 207);
+            width: 80%;
+            left: 10%;
+            right: 10%;           
+        }
+
+        .upper_trapezoid{
+            position: absolute;
+            shape-outside: polygon(0% 0%, 0% 10%, 100% 5%, 100% 0%); 
+            clip-path: polygon(0% 0%, 0% 20%, 100% 10%, 100% 0%); 
+            background-color:rgb(29, 44, 133);
+            opacity: 0.5;
+            height: 20%; 
+            width: 100%; 
+        }
+
+        .lower_trapezoid{
+            position: absolute;
+            shape-outside: polygon(0 10%, 100% 0%, 100% 20%, 0% 20%);
+            clip-path: polygon(0 10%, 100% 0%, 100% 20%, 0% 20%); 
+            background-color:rgb(29, 44, 133);
+            opacity: 0.5;
+            height: 20%; 
+            width: 100%; 
+            bottom: -16%;
+            
+        }
+
+
+        .left_block{
+            width: 30%;
+            background-color: rgb(83, 83, 145);
+        }
+
+        .left_upper_photo{  
+            width: 40%;
+            height: 60%;     
+            margin : 10% 50% 60%;     
+        }
+
+        .photo_list{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .photo_list_item{  
+            width: 55%;
+            height: 55%;        
+            margin-left: 45%;
+            margin-bottom: 30%;
+        }
+
+        .right_block{
+            width: 70%;
+            padding: 2%;
+        }
+
+        .text{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1vw;
+        }
+
+        .text_title {
+            font-weight: 800;
+        }
+
+        .right_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width : 80%;
+            height : 20%;   
+        }
+
+        .text_block{
+            display : grid;
+            grid-template-columns: auto auto;
+            gap : 0% 5%;
+        }
+
+        .list_block {
+            font-family: Arial, Helvetica, sans-serif;
+            grid-row-start: 1 span;
+            font-size: 1vw;
+            line-height: 150%;
+        }
+
+        .yellow_text{
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class = "upper_trapezoid"></div>
+        <div class = "left_block">
+            <div class = "photo_list">
+               <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/%D0%A2%D1%80%D0%B8%D0%B7%D1%83%D0%B1.svg/462px-%D0%A2%D1%80%D0%B8%D0%B7%D1%83%D0%B1.svg.png", class = "left_upper_photo">
+               
+               <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Ukraine_%28pantone_colors%29.svg/1024px-Flag_of_Ukraine_%28pantone_colors%29.svg.png", class = "photo_list_item">
+               <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Ukraine_%28pantone_colors%29.svg/1024px-Flag_of_Ukraine_%28pantone_colors%29.svg.png", class = "photo_list_item">
+               <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Ukraine_%28pantone_colors%29.svg/1024px-Flag_of_Ukraine_%28pantone_colors%29.svg.png", class = "photo_list_item">
+               <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Ukraine_%28pantone_colors%29.svg/1024px-Flag_of_Ukraine_%28pantone_colors%29.svg.png", class = "photo_list_item">
+            </div>
+        </div>
+
+        <div class = "right_block">
+            <p class = "text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Ukraine_%28pantone_colors%29.svg/1024px-Flag_of_Ukraine_%28pantone_colors%29.svg.png", class = "right_image">
+
+            <div class = "text_block">
+                <div class = "text">
+                    <p class = "text_title">
+                        Lorem ipsum
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Vitae purus faucibus ornare suspendisse sed nisi lacus. Penatibus et magnis dis parturient montes nascetur ridiculus mus. Risus commodo viverra maecenas accumsan.
+                        Amet aliquam id diam maecenas. Odio aenean sed adipiscing diam donec adipiscing tristique.
+                    </p>
+                </div>
+
+                <div class = "text">
+                    <p class = "text_title">
+                        Dolor sit amet
+                    </p>
+                    <p>
+                        Sit amet facilisis magna etiam. Risus commodo viverra maecenas accumsan lacus vel facilisis. Vitae sapien pellentesque habitant morbi tristique.
+                        Amet aliquam id diam maecenas. Odio aenean sed adipiscing diam donec adipiscing tristique.
+                        Vitae purus faucibus ornare suspendisse sed nisi lacus. Penatibus et magnis dis parturient.
+                        Cursus in hac habitasse platea dictumst quisque sagittis.
+                    </p>
+                </div>
+
+                <div class = "text">
+                    <p class = "text_title">
+                        Ultricies mi eget mauris pharetra
+                    </p>
+                    <p>
+                        Ultricies mi eget mauris pharetra. Aliquet bibendum enim facilisis gravida neque convallis a cras. Justo donec enim diam vulputate ut pharetra sit. 
+                        Non quam lacus suspendisse faucibus interdum posuere. Est ullamcorper eget nulla facilisi etiam. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget. 
+                        Tellus elementum sagittis vitae et leo duis ut diam. Fringilla est ullamcorper eget nulla facilisi etiam.
+                    </p>
+
+                    <p class = "text_title">
+                        Sagittis vitae et leo duis ut diam
+                    </p>
+                    <p>
+                        Sagittis vitae et leo duis ut diam. Orci eu lobortis elementum nibh tellus molestie nunc. 
+                        Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Turpis egestas maecenas pharetra convallis posuere morbi. 
+                        Leo vel orci porta non pulvinar neque laoreet suspendisse. 
+                    </p>
+
+                    <p class = "text_title">
+                        Viverra nam libero justo laoreet sit amet
+                    </p>
+                    <p>
+                        Viverra nam libero justo laoreet sit amet. Cras tincidunt lobortis feugiat vivamus. Vulputate sapien nec sagittis aliquam malesuada. 
+                        Ultrices neque ornare aenean euismod elementum. Metus dictum at tempor commodo ullamcorper a. Cursus risus at ultrices mi tempus.
+                        Venenatis cras sed felis eget velit aliquet sagittis.
+                    </p>
+                </div>
+
+                <div class = "list_block">
+                    <p class = "text_title">
+                        List
+                    </p>
+                    
+                    <ul style="list-style-type:square">
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Sit amet facilisis magna etiam. Risus commodo viverra maecenas accumsan.</li>
+                        <li>Dui sapien eget mi proin. Id diam vel quam elementum pulvinar.</li>
+                        <li>In hac habitasse platea dictumst vestibulum rhoncus est nec.</li>
+                        <li>Viverra nam libero justo laoreet sit amet. Cras tincidunt lobortis feugiat vivamus.</li>
+                        <li>Sagittis vitae et leo duis ut diam. Orci eu lobortis elementum nibh tellus.</li>
+                        <li>Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus in hendrerit.</li>
+                        <li>Diam quis enim lobortis scelerisque fermentum. Libero justo laoreet sit.</li>
+                        <li>Semper eget duis at tellus. Ac tortor vitae purus faucibus ornare.</li>
+                        <li>Venenatis cras sed felis eget velit aliquet sagittis id. Lectus.</li>
+                    </ul>
+                </div>
+
+                <div class = "text">
+                    <p class = "text_title">
+                        Dolor sit amet
+                    </p>
+                    <p>
+                        Sit amet facilisis magna etiam. Risus commodo viverra maecenas accumsan lacus vel facilisis. Vitae sapien <span class = "yellow_text" >pellentesque habitant morbi tristique.</span>
+                        Amet aliquam id diam maecenas. Odio aenean sed adipiscing diam donec adipiscing tristique.
+                        Vitae purus faucibus ornare suspendisse sed nisi lacus. Penatibus et magnis dis parturient.
+                        Cursus in hac habitasse platea dictumst quisque sagittis.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class = "lower_trapezoid"></div>
+    </div>
+</body>
+</html>
