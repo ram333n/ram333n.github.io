@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1b</title>
+    
+    <style>
+        .main {
+            display : flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            max-width: 1200px;
+        }
+        
+        div {
+            border-radius: 5px;
+            flex : 1;
+            gap : 10px;
+        }
+
+        .header {
+            background-color: black;
+        }
+
+        .lateral {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lateral_orange {
+            background-color: orange;
+            flex : 2;
+        }
+
+        .lateral_gray {
+            background-color: gray;
+        }
+
+        .body {
+            display: flex;
+            flex : 6;
+        }
+
+        .body_blue {
+            background-color: rgb(6, 125, 223);
+            flex : 4 6;
+        }
+        
+        .footer {
+            background-color: rgb(10, 23, 82);
+        }
+
+        @media (min-width : 768px) and (max-width : 992px){
+            .body {
+                flex-direction: column-reverse;
+            }
+
+            .lateral {
+                flex-direction: row-reverse;
+            }
+        }
+
+        @media (max-width : 768px){
+            .lateral_gray, .lateral_orange {
+                flex : 1;
+            }
+
+            .lateral {
+                flex-direction: column;                
+            }
+
+            .body {
+                flex-direction: column-reverse;
+            }               
+        }
+        
+    </style>
+</head>
+<body>
+    <div class = "main">
+        <div class = "header"></div>
+        <div class = "body">
+            <div class = "lateral">
+                <div class = "lateral_orange"></div>
+                <div class = "lateral_gray"></div>
+            </div>
+
+            <div class = "body_blue"></div>
+        </div>
+        <div class = "footer"></div>
+    </div>
+</body>
+</html>

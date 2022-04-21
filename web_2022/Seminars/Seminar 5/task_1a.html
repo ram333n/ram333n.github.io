@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1a</title>
+    <style>
+        .main {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        div {
+            border-radius: 5px;
+            flex: 1;
+            gap: 10px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class = "main">
+        <div class = "column">
+            <div class = "purple"></div>
+            <div class = "row">
+                <div class = "green"></div>
+                <div class = "column">
+                    <div class = "blue"></div>
+                    <div class = "red" style = "flex: 3;"></div>
+                </div>
+            </div>
+            <div class = "green"></div>
+        </div>  
+        
+        <div class = "column">
+            <div class = "row">
+                <div class = "green"></div>
+                <div class = "column">
+                    <div class = "blue"></div>
+                    <div class = "red" style = "flex:4;"></div>
+                </div>
+            </div>
+            <div class = "purple"></div>
+        </div>
+
+        <div class = "column">
+            <div class = "green"></div>
+            <div class = "row">
+                <div class = "blue"></div>
+                <div class = "red" style = "flex: 3;"></div>
+            </div>
+            <div class = "purple" style = "flex: 3;"></div>
+            <div class = "blue"></div>
+        </div>
+    </div>
+</body>
+</html>
