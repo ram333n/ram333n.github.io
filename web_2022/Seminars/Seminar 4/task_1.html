@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        .lateral_page, .central_page {
+            display: flex;
+            width : 40%;
+            padding: 1% 1%;
+            gap : 5%;
+            background-image: url(https://images.unsplash.com/photo-1432847712612-926caafaa802?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80);
+            background-size:contain;
+        }
+
+        .central_page {
+            position: absolute;
+            top: 40%;
+            left: 28%;
+            z-index: 2;
+        }
+
+        .main_content {
+            display: flex;
+            flex-direction: column;
+            flex : 2;    
+        }
+
+        .main_image {
+            width : 100%;
+            border : solid 3px white;   
+        }
+
+        .image_with_subscription {
+            text-align: center;
+        }
+
+        .subscription {
+            margin-top: 0;
+            margin-bottom: 5%;
+        }
+
+        .image_grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 0px;
+            flex: 1;
+            margin-bottom: 15%;
+        }
+
+        .grid_item {
+            width: 60%;
+            border : solid 3px white; 
+        }       
+
+        .text_block {
+            background-color: white;
+        }
+
+        .image_in_text {
+            width: 20%;
+            height: 20%;
+            float: left;
+            margin-left: 1%;
+            margin-right: 1%;
+            border : solid 3px yellow;
+        }
+
+        .lateral_buttons_set {
+            display: flex;
+            height: 15%;
+            background-color: rgb(216, 166, 166);     
+        }
+
+        .lateral_button {
+            font-size: 0.8vw;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            background-color: white;
+            padding: 1%;
+            margin-top: 1%;
+            margin-left: 1%;
+        }
+
+        .central_buttons_set {
+            display: flex;
+            height: 15%;
+            background-color: rgb(12, 181, 233); 
+        }
+
+        .central_button {
+            color : white;
+            font-size: 0.8vw;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            background-color: rgb(13, 103, 238);
+            padding: 1%;
+            margin-top: 1%;
+            margin-left: 1%;
+        }
+
+        .lateral_button:hover {
+            color:red;
+        }
+
+        .central_button:hover {
+            background-color: red;
+        }
+
+        p {
+            font-size: 0.7vw;
+            font-family: Arial, Helvetica, sans-serif;
+            color:white;
+        }
+
+        a {
+            font-size: 0.7vw;
+            font-family: Arial, Helvetica, sans-serif;
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "lateral_page">
+        <div class = "main_content">
+            <div class = "image_with_subscription">
+                <img src = "https://wonderfulengineering.com/wp-content/uploads/2014/09/Green-Wallpaper-35.jpg" class = "main_image">
+                <p class = "subscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+            <div class = "text_block">
+                <div class = "lateral_buttons_set">
+                    <div class = "lateral_button" style = "color : red;">Lorem ipsum</div>
+                    <div class = "lateral_button">Lorem ipsum</div>
+                    <div class = "lateral_button">Lorem ipsum</div>
+                </div>
+                <p style="color : black; margin-left: 1%;">
+                    <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="image_in_text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Convallis tellus id interdum velit laoreet id donec ultrices. Commodo nulla facilisi nullam vehicula. Nulla pellentesque dignissim enim sit amet.
+                    Aliquam purus sit amet luctus venenatis lectus. Diam sollicitudin tempor id eu. Vitae turpis massa sed elementum. Tristique nulla aliquet enim tortor.
+                    Eros in cursus turpis massa tincidunt dui. Arcu vitae elementum curabitur vitae nunc. <br> <br>
+
+                    <a href = "https://www.google.com/">Lorem ipsum</a>
+                </p>
+            </div>
+        </div> 
+        
+        <div class = "image_grid">
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item">
+                <p class = "subscription">Lorem</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "central_page">
+        <div class = "main_content">
+            <div class = "image_with_subscription">
+                <img src = "https://wonderfulengineering.com/wp-content/uploads/2014/09/Green-Wallpaper-35.jpg" class = "main_image">
+                <p class = "subscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+            <div class = "text_block">
+                <div class = "central_buttons_set">
+                    <div class = "central_button" style = "background-color : red;">Lorem ipsum</div>
+                    <div class = "central_button">Lorem ipsum</div>
+                    <div class = "central_button">Lorem ipsum</div>
+                </div>
+                <p style="color : black; margin-left: 1%;">
+                    <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="image_in_text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Convallis tellus id interdum velit laoreet id donec ultrices. Commodo nulla facilisi nullam vehicula. Nulla pellentesque dignissim enim sit amet.
+                    Aliquam purus sit amet luctus venenatis lectus. Diam sollicitudin tempor id eu. Vitae turpis massa sed elementum. Tristique nulla aliquet enim tortor.
+                    Eros in cursus turpis massa tincidunt dui. Arcu vitae elementum curabitur vitae nunc. <br> <br>
+
+                    <a href = "https://www.google.com/">Lorem ipsum</a>
+                </p>
+            </div>
+        </div> 
+        
+        <div class = "image_grid"></div>
+    </div>
+
+
+    <div class = "lateral_page" style = "position: absolute; left: 57%; top: 1%">
+        <div class = "main_content">
+            <div class = "image_with_subscription">
+                <img src = "https://wonderfulengineering.com/wp-content/uploads/2014/09/Green-Wallpaper-35.jpg" class = "main_image">
+                <p class = "subscription">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+            <div class = "text_block">
+                <div class = "lateral_buttons_set">
+                    <div class = "lateral_button" style = "color : red;">Lorem ipsum</div>
+                    <div class = "lateral_button">Lorem ipsum</div>
+                    <div class = "lateral_button">Lorem ipsum</div>
+                </div>
+                <p style="color : black; margin-left: 1%;">
+                    <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="image_in_text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Convallis tellus id interdum velit laoreet id donec ultrices. Commodo nulla facilisi nullam vehicula. Nulla pellentesque dignissim enim sit amet.
+                    Aliquam purus sit amet luctus venenatis lectus. Diam sollicitudin tempor id eu. Vitae turpis massa sed elementum. Tristique nulla aliquet enim tortor.
+                    Eros in cursus turpis massa tincidunt dui. Arcu vitae elementum curabitur vitae nunc. <br> <br>
+
+                    <a href = "https://www.google.com/">Lorem ipsum</a>
+                </p>
+            </div>
+        </div> 
+        
+        <div class = "image_grid" style = "grid-template-columns: auto; margin-bottom: 10%;">
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item" style = "width: 30%;">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item" style = "width: 30%;">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item" style = "width: 30%;">
+                <p class = "subscription">Lorem</p>
+            </div>
+
+            <div class = "image_with_subscription">
+                <img src = "https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" class="grid_item" style = "width: 30%;">
+                <p class = "subscription">Lorem</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
