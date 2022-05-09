@@ -2,43 +2,39 @@
 
 body {
     margin: 0;
+    min-width: 300px;
 }
 
 .header {
-    background-color: blue;
+    background-color: rgb(0, 110, 255);
+    color:white;
+    display: flex;
+    justify-content: space-around;  
     height: 200px;
     width: 100%;
     opacity: 0.8;
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-around;  
-    height: 100%;
-}
-
-.header-content-company {
+.header-company {
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.header-content-company-logo {
-    background-position: center;
-    background-size: 100%;
+.header-company-logo {
     width: 125px;
     height: 125px;
     padding: 10px;
 }
 
-.header-content-numbers {
+.header-numbers {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .menu {
-    background-color: rgb(71, 33, 33);
+    background-color: rgb(39, 18, 18);
     height: 90px;
 }
 
@@ -54,19 +50,18 @@ body {
 }
 
 .menu-list-item {
-    font-family: 'PT Sans', sans-serif;
     color: white;
     font-size: 28px;
     text-decoration: none;
 }
 
 .slider {
-
+    width: 100%; 
 }
 
 .content {
     display: flex;
-    gap:10%;
+    gap:5%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 3%;
@@ -96,17 +91,91 @@ body {
 }
 
 .footer {
-    background-color: blue;
+    display: flex;
+    justify-content:space-between;
+    background-color: rgb(0, 110, 255);
     height: 200px;
     width: 100%;
     opacity: 0.8;
+    padding-top: 40px;
 }
 
-p, h1 {
+.footer-email {
+    flex: 1;
+    margin-left: 20%;
+}
+
+.footer-list {
+    flex:1;
+    list-style-type: none;
+}
+
+.footer-devs-info {
+    flex: 1;
+    display: flex;
+    justify-content: start;  
+}
+
+.footer-devs-info-logo {
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 16px;
+}
+
+p, h1, a {
     font-family: 'PT Sans', sans-serif;
 }
 
 p {
     font-size: 14px;
     line-height: 22px;
+}
+
+@media (max-width : 768px) {
+    .header {
+        height: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        height: 100%;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .slider {
+        width: 100%; 
+        height: 250px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding-top: 0;
+        height: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-email {
+        margin-left: 0;
+    }
+
+    .footer-list {
+        padding-left: 0;
+    }
+
+    .footer-devs-info {
+        margin-top: 15px;
+    }
+
 }
