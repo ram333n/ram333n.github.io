@@ -47,6 +47,7 @@ body {
     margin-right: 10%;
     padding-top: 26.5px;
     padding-bottom: 26.5px;
+    padding-left: 0;
 }
 
 .menu-list-item {
@@ -120,7 +121,7 @@ body {
     width: 40px;
     height: 40px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 5px;
     padding-top: 16px;
 }
 
@@ -147,7 +148,7 @@ p {
     .menu-list {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 0;
+        margin-bottom: 0; 
     }
 
     .slider {
@@ -177,5 +178,4 @@ p {
     .footer-devs-info {
         margin-top: 15px;
     }
-
 }
