@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="lhs">
+        <input type="number" id="rhs">
+        <input type="number" id="result" hidden = "hidden" readonly = "readolny">
+
+        <button type='button' id="clear" hidden = "hidden">Clear</button>
+        <button type='button' id="addition">+</button>
+        <button type='button' id="subtraction">-</button>
+        <button type='button' id="multiplication">*</button>
+        <button type='button' id="division">/</button>
+    </form>
+
+    <script>
+        function evaluate(operation) {
+            let lhs = parseInt(document.getElementById('lhs').value, 10);
+            let rhs = parseInt(document.getElementById('rhs').value, 10);
+            let res;
+
+            if(operation === 'addition') {
+                res = lhs + rhs;
+            } else if(operation === 'subtraction') {
+                res = lhs - rhs;
+            } else if(operation ==='multiplication'){
+                res = lhs * rhs;
+            } else {
+                res = lhs / rhs;
+            }
+            
+            let resOutput = document.getElementById('result');
+            let clearButton = document.getElementById('clear');
+
+            resOutput.value = res;
+
+            resOutput.removeAttribute('hidden');
+            clearButton.removeAttribute('hidden');
+        }
+
+        document.getElementById('addition').onclick = function() {
+            evaluate('addition');
+        }
+        
+        document.getElementById('subtraction').onclick = function() {
+            evaluate('subtraction');
+        }
+
+        document.getElementById('multiplication').onclick = function() {
+            evaluate('multiplication');
+        }
+
+        document.getElementById('division').onclick = function() {
+            evaluate('division');
+        }
+
+        document.getElementById('clear').onclick = function() {
+            document.getElementById('lhs').value = "";
+            document.getElementById('rhs').value = "";
+
+            let resOutput = document.getElementById('result');
+            resOutput.value = 0;
+            resOutput.setAttribute('hidden', 'hidden');
+            
+            this.setAttribute('hidden', 'hidden');
+        }
+    </script>
+</body>
+</html>
