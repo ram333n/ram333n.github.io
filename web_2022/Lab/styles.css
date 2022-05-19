@@ -22,6 +22,9 @@ body {
 }
 
 .header-company-logo {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-RHl7vIU-IdxwPdDutMc1a-0XpDhTohhiQ&usqp=CAU") transparent,
+                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-RHl7vIU-IdxwPdDutMc1a-0XpDhTohhiQ&usqp=CAU") transparent;
+
     width: 125px;
     height: 125px;
     padding: 10px;
